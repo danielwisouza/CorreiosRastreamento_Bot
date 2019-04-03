@@ -14,7 +14,7 @@ private static Model model;
 	}
 	
 	public static void initializeModel(Model model){
-		model.addObjeto(new Objeto("a","123"));
+		model.addObjeto(new Objeto("a","OA160610789BR","Objeto entregue ao destinatário"));
 	}
 	/*
 	public static void main(String[] args) {

@@ -40,7 +40,7 @@ public class Model implements Subject{
 		String ObjetoData = null;
 		for(Objeto objeto: objetos){
 			if(objeto.getCodigo().equals(update.message().text())){
-				ObjetoData = objeto.getCodigo();
+				ObjetoData = objeto.getStatus();
 			}
 		}
 		
