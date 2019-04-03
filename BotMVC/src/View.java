@@ -41,11 +41,14 @@ public class View implements Observer{
 	
 	public void receiveUsersMessages() {
 
+
+		//controle de off-set, isto é, a partir deste ID será lido as mensagens pendentes na fila
 		
 		
-		//infinity loop
+		//loop infinito pode ser alterado por algum timer de intervalo curto
+		
 		while (true){
-		
+			
 			//taking the Queue of Messages
 			updatesResponse =  bot.execute(new GetUpdates().limit(100).offset(queuesIndex));
 			
@@ -54,38 +57,30 @@ public class View implements Observer{
 
 			//taking each message in the Queue
 			for (Update update : updates) {
-				
+				bot.execute(new SendMessage(update.message().chat().id(),"Bem vindo ao Bot Rasteio de Encomendas ;-) "));
 				//updating queue's index
 				queuesIndex = update.updateId()+1;
 				
 				if(this.searchBehaviour==true){
 					this.callController(update);
 					
-				}else if(update.message().text().equals("objeto")){
-					setControllerSearch(new ControllerSearchObjeto(model, this));
-					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Qual c�digo do objeto?"));
-					this.searchBehaviour = true;
 					
-				} /*else {
-					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Type teacher or student"));
-				}*/
+				} else {
+					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Qual codigo da sua encomenda? "));
+					setControllerSearch(new ControllerSearchObjeto(model, this));
+					this.searchBehaviour = true;
+				}
 				
 				
 				
-			}
-
-		}
-		
-		
-	}
-	
+			}}}
 	
 	public void callController(Update update){
 		this.controllerSearch.search(update);
 	}
 	
-	public void update(long chatId, String studentsData){
-		sendResponse = bot.execute(new SendMessage(chatId, studentsData));
+	public void update(long chatId, String objetosData){
+		sendResponse = bot.execute(new SendMessage(chatId, objetosData));
 		this.searchBehaviour = false;
 	}
 	
