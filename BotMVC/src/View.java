@@ -57,7 +57,7 @@ public class View implements Observer{
 
 			//taking each message in the Queue
 			for (Update update : updates) {
-				bot.execute(new SendMessage(update.message().chat().id(),"Bem vindo ao Bot Rasteio de Encomendas ;-) "));
+			 
 				//updating queue's index
 				queuesIndex = update.updateId()+1;
 				
@@ -67,7 +67,9 @@ public class View implements Observer{
 					
 				} else {
 					sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Qual codigo da sua encomenda? "));
+					
 					setControllerSearch(new ControllerSearchObjeto(model, this));
+					
 					this.searchBehaviour = true;
 				}
 				
