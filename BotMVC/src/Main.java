@@ -1,18 +1,22 @@
-import java.util.List;
-
-import com.pengrad.telegrambot.TelegramBot;
-import com.pengrad.telegrambot.TelegramBotAdapter;
-import com.pengrad.telegrambot.model.Update;
-import com.pengrad.telegrambot.model.request.ChatAction;
-import com.pengrad.telegrambot.request.GetUpdates;
-import com.pengrad.telegrambot.request.SendChatAction;
-import com.pengrad.telegrambot.request.SendMessage;
-import com.pengrad.telegrambot.response.BaseResponse;
-import com.pengrad.telegrambot.response.GetUpdatesResponse;
-import com.pengrad.telegrambot.response.SendResponse;
-
 public class Main {
 
+	
+private static Model model;
+	
+	public static void main(String[] args) {
+
+		model = Model.getInstance();
+		initializeModel(model);
+		View view = new View(model);
+		model.registerObserver(view); //connection Model -> View
+		view.receiveUsersMessages();
+
+	}
+	
+	public static void initializeModel(Model model){
+		model.addObjeto(new Objeto("a","123"));
+	}
+	/*
 	public static void main(String[] args) {
 
 		//Cria√ß√£o do objeto bot com as informa√ß√µes de acesso
@@ -41,7 +45,8 @@ public class Main {
 			//an√°lise de cada a√ß√£o da mensagem
 			
 			for (Update update : updates) {
-				bot.execute(new SendMessage(update.message().chat().id(),"Ol· usu·rio este bot ir· te auxiliar no restreio de sua encomenda"));
+				
+				//bot.execute(new SendMessage(update.message().chat().id(),"Ol· usu·rio este bot ir· te auxiliar no restreio de sua encomenda"));
 				//atualiza√ß√£o do off-set
 				m = update.updateId()+1;
 				
@@ -61,6 +66,6 @@ public class Main {
 
 		}
 
-	}
+	}*/
 
 }
