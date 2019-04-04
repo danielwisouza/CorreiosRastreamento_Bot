@@ -13,7 +13,7 @@ import com.pengrad.telegrambot.response.SendResponse;
 
 public class View implements Observer{
 
-	
+	//private static final String COMMAND_START = "/start";
 	TelegramBot bot = TelegramBotAdapter.build("760008905:AAHpWKPBodLu-bE8p_foM6fkRhWORzk5DvM");
 	//Object that receives messages
 	GetUpdatesResponse updatesResponse;
@@ -57,7 +57,7 @@ public class View implements Observer{
 
 			//taking each message in the Queue
 			for (Update update : updates) {
-			 
+			    
 				//updating queue's index
 				queuesIndex = update.updateId()+1;
 				

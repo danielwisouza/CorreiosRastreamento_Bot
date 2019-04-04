@@ -12,7 +12,13 @@
 
 ## Protótipo
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+### Inicio
+
+<img align="center" src="Imagem/inicio.png" alt="Imagem" width="80%">
+
+### Start
+
+<img align="center" src="Imagem/start.png" alt="Imagem" width="80%"/>
 
 
 
