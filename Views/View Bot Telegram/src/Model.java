@@ -47,8 +47,13 @@ public class Model implements Subject{
 		if(ObjetoData != null){
 			this.notifyObservers(update.message().chat().id(), ObjetoData);
 		} else {
-			this.notifyObservers(update.message().chat().id(), "Mercadoria não encontrada.");
+			this.notifyObservers(update.message().chat().id(), "Mercadoria nï¿½o encontrada.");
 		}
+		
+	}
+
+	public void buscaUsuarioServidor(Update update){
+
 		
 	}
 		

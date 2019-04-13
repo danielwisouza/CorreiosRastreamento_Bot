@@ -75,6 +75,7 @@ public class View implements Observer{
 				
 				
 				
+				
 			}}}
 	
 	public void callController(Update update){

@@ -14,9 +14,9 @@ private static Model model;
 	}
 	
 	public static void initializeModel(Model model){
-		model.addObjeto(new Objeto("a","OA160610789BR","Objeto entregue ao destinatário"));
+		model.addObjeto(new Objeto("a","OA160610789BR","Objeto entregue ao destinatï¿½rio"));
 	}
-	/*
+	/* Exemplo para utilizar apenas a Main sem o conceito de MVC
 	public static void main(String[] args) {
 
 		//CriaÃ§Ã£o do objeto bot com as informaÃ§Ãµes de acesso
@@ -46,7 +46,7 @@ private static Model model;
 			
 			for (Update update : updates) {
 				
-				//bot.execute(new SendMessage(update.message().chat().id(),"Olá usuário este bot irá te auxiliar no restreio de sua encomenda"));
+				//bot.execute(new SendMessage(update.message().chat().id(),"Olï¿½ usuï¿½rio este bot irï¿½ te auxiliar no restreio de sua encomenda"));
 				//atualizaÃ§Ã£o do off-set
 				m = update.updateId()+1;
 				
@@ -58,7 +58,7 @@ private static Model model;
 				System.out.println("Resposta de Chat Action Enviada?" + baseResponse.isOk());
 				
 				//envio da mensagem de resposta
-				sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Não entendi..."));
+				sendResponse = bot.execute(new SendMessage(update.message().chat().id(),"Nï¿½o entendi..."));
 				//verificaÃ§Ã£o de mensagem enviada com sucesso
 				System.out.println("Mensagem Enviada?" +sendResponse.isOk());
 				
