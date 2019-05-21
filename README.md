@@ -8,17 +8,17 @@
 
 ## Fluxograma
 
-<img align="center" src="Imagem/Padroes_de_Projeto.jpg" alt="Imagem" width="80%"/>
+<img align="center" src="Image/Padroes_de_Projeto.jpg" alt="Imagem" width="80%"/>
 
 ## Protótipo
 
 ### Inicio
 
-<img align="center" src="Imagem/inicio.png" alt="Imagem" width="80%">
+<img align="center" src="Image/inicio.png" alt="Imagem" width="80%">
 
 ### Start
 
-<img align="center" src="Imagem/start.png" alt="Imagem" width="80%"/>
+<img align="center" src="Image/start.png" alt="Imagem" width="80%"/>
 
 
 
