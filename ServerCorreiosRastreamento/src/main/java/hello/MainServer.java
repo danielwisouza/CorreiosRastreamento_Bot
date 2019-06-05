@@ -25,10 +25,11 @@ public class MainServer {
         Controller controller = new Controller(modelo); 
         
         inicializarDados();
+             controller.objetos();
 		
     }
     
     public static void inicializarDados(){
-    	//modelo.addAdministrador(new Administrador("daniel.souza", "12345"));
+    	modelo.addObjeto(new Objeto("daniel.souza", "12345","FFF",1));
     }
 }

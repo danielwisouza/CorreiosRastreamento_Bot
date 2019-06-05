@@ -1,6 +1,10 @@
 package hello;
 
 public class Usuario {
+	@Override
+	public String toString() {
+		return "Usuario [email=" + email + ", password=" + password+ "]";
+	}
 	private String email;
 	private String password;
 
