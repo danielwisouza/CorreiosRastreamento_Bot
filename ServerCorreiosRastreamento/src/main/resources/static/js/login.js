@@ -8,7 +8,7 @@ function logar() {
 	}
 	
 	//busca os dados do chamado recebido de parametro
-	url = '/chamado/usuario/' + usuario;
+	url = '/objeto' + usuario;
 	$.getJSON(url, function(data) {
 		console.log(data);
 		if(data.length == 0) {

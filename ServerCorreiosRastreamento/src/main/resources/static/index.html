@@ -9,28 +9,30 @@
 		<script src="js/index.js"></script>
 	</head>
 	<body>
-	
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  	<a class="navbar-brand" href="#">CorreiosRastreamento</a>
-	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    	<span class="navbar-toggler-icon"></span>
-	  	</button>
-
-<!-- 	  	<form class="form-inline">
-    		<input id="numPesquisa" class="form-control mr-sm-2" type="search" placeholder="Número do chamado" aria-label="Search">
-		    <button id="btnPesq" onclick="pesquisarChamado()" class="btn btn-outline-secondary my-2 my-sm-0">Procurar</button>
-		</form> -->
-	</nav>
-	
-	<div class="container">
-		<div class="row">
-			<div class="col mt-3">
-				<a href="chamado.html" class="btn btn-info">Novo Objeto</a>
+		
+			<div class="column2" align="center">
+					<div class="breadcrumb"></div>
+					<div class="content  trescolunas">
+					<a name="ancora"></a>
+					
+					<div class="tituloimagem">
+					<h3>Rastreamento<span style="font-weight:lighter"> por objeto ou </span>CPF/CNPJ*</h3>
+					</div>
+					<div class="msg">
+					
+					</div>
+					<div class="quadroavisos">
+				
+				
+					<label>Consulte a situação de seus objetos nos Correios. Digite seu CPF/CNPJ ou até 50 códigos de 13 dígitos cada, separando-os com ponto e vírgula. Ex: AA123456789BR;AA987654321BR;AA100833276BR.<br>
+					<textarea id="objetos" name="objetos" class="f8col fldSRO f3row" style="text-transform:uppercase;" onblur="this.value=this.value.toUpperCase()" onkeydown="if (event.keyCode == 13){validaEnter()}"></textarea>
+				
+					<input type="submit" id="btnPesq" name="btnPesq" class="btn1 float-center btnSubmit" value="Buscar">
 			</div>
-
-		</div>
-	</div>
-	
+			<div class="col mt-3">
+					<a href="login.html" class="btn btn-info">Se autenticar</a>
+				</div>
+					
 	</body>
   
 </html>
