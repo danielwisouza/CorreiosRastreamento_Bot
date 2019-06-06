@@ -26,6 +26,11 @@
 
 <img align="center" src="Image/start.png" alt="Imagem" width="80%"/>
 
+
+### Pesquisa
+
+<img align="center" src="Image/pesquisa.png" alt="Imagem" width="80%"/>
+
 ### Modelo Web View
 
 <img align="center" src="Image/ModeloWebView.png" alt="Imagem" width="80%"/>
