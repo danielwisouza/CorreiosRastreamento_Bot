@@ -29,7 +29,7 @@
 
 ### Pesquisa
 
-<img align="center" src="Image/pesquisa.png" alt="Imagem" width="80%"/>
+<img align="center" src="Image/Pesquisa.png" alt="Imagem" width="80%"/>
 
 ### Modelo Web View
 
